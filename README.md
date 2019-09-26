@@ -28,7 +28,7 @@ For key bit lengths of less than or equal to 256 bits, after a couple of minutes
 Please note this may take some time due to `cado-nfs` and `openssl` library compile times.
 
 #### clone the repo
-`git clone < this repo >`
+`git clone https://github.com/b4den/rsacrack.git`
 
 ### build the image
 `docker build . -t rsacrack`
