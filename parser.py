@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 from Crypto.PublicKey import RSA
 
 import base64
