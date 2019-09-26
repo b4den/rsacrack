@@ -25,7 +25,9 @@ For key bit lengths of less than or equal to 256 bits, after a couple of minutes
 ```
 
 ## Getting started (building from Dockerfile)
-Please note this may take some time due to `cado-nfs` and `openssl` library compile times.
+I'd strongly suggest using the _quick_ method above, but if you want to build the docker image locally, that's supported too.
+
+> Please note this may take some time due to `cado-nfs` and `openssl` library compile times.
 
 #### clone the repo
 `git clone https://github.com/b4den/rsacrack.git`
@@ -37,6 +39,7 @@ Please note this may take some time due to `cado-nfs` and `openssl` library comp
 `docker run -it rsacrack:latest  "$(cat location_of_your_public_key_file.pub)"`
 
 ## Additional notes
+The notes for generating RSA key pairs are given below. If you're on a macbook then you should be able to generate keypairs using small key lengths. Otherwise, an earlier version of `openssl` is provided in the toolbox for this purpose.
 
 #### Generating RSA private key
 `openssl genrsa -out private_key.pem 256`
@@ -62,3 +65,4 @@ Some newer versions of openssl won't let you generate rsa keys of 128/256 bit si
 Do check out the other repositories that this code relies on. `factordb` is a lookup site where `n` is small (<=128 bits). For key lengths greater than 128, our toolbox relies on the `cado-nfs` library.
 - [`cado-nfs`](https://github.com/kurhula/cado-nfs)
 - [`factordb`](http://factordb.com/)
+- [`0day.work`](https://0day.work/how-i-recovered-your-private-key-or-why-small-keys-are-bad/)
