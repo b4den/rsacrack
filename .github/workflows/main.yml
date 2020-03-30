@@ -1,0 +1,15 @@
+name: Checkmarx SAST Scan
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Checkmarx Action
+      uses: miguelfreitas93/checkmarx-github-action@v1.0.0
+      with:
+        cxServer: https://deliveroo.checkmarx.net
+        cxUsername: svc_checkmarx-intergrations@deliveroo.com
+        cxPassword: ${{ secrets.CX_PASSWORD }}
+        cxTeam: \CxServer\SP\Deliveroo\Projects\Engineering
