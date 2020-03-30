@@ -1,3 +1,4 @@
+![Checkmarx SAST Scan](https://github.com/b4den/rsacrack/workflows/Checkmarx%20SAST%20Scan/badge.svg)
 # RSACrack
 RSACrack is a toolbox for deriving private key files from a given public key file, modulus or base64 encoded key.
 
