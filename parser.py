@@ -1,6 +1,7 @@
 #!/usr/bin/python
 from Crypto.PublicKey import RSA
 
+import re
 import base64
 import sys
 import subprocess
