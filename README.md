@@ -36,7 +36,7 @@ I'd strongly suggest using the _quick_ method above, but if you want to build th
 `docker build . -t rsacrack`
 
 ### run your experiments!
-`docker run -it rsacrack:latest  "$(cat location_of_your_public_key_file.pub)"`
+`docker run -it b4den/rsacrack:latest  "$(cat location_of_your_public_key_file.pub)"`
 
 ## Additional notes
 The notes for generating RSA key pairs are given below. If you're on a macbook then you should be able to generate keypairs using small key lengths. Otherwise, an earlier version of `openssl` is provided in the toolbox for this purpose.
